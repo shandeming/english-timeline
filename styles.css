@@ -1,0 +1,24 @@
+.et-marker-layer { position:absolute; left:0; right:0; top:-7px; height:14px; z-index:45; pointer-events:none; }
+.et-marker { position:absolute; top:0; width:12px; height:14px; margin:0 0 0 -6px; padding:0; border:0; border-radius:3px; background:transparent; cursor:pointer; pointer-events:auto; }
+.et-marker::after { content:""; display:block; width:4px; height:12px; margin:auto; background:#72f0cf; border-radius:2px; box-shadow:0 0 0 1px #12392c,0 1px 4px #0009; }
+.et-marker:hover::after,.et-marker:focus-visible::after { width:7px; background:#fff; }
+.et-toggle.ytp-button { font-size:25px; color:#72f0cf; vertical-align:top; }
+.et-panel { position:absolute; right:16px; bottom:64px; width:310px; max-width:calc(100% - 32px); max-height:calc(100% - 90px); overflow:auto; box-sizing:border-box; padding:16px; z-index:65; background:#15201ff5; border:1px solid #45635b; border-radius:12px; box-shadow:0 8px 32px #0008; color:#f2f8f6; font:14px/1.5 Arial,sans-serif; text-shadow:none; cursor:default; }
+.et-panel[hidden],.et-toast[hidden] { display:none !important; }
+.et-panel button,.et-panel input { font:inherit; box-sizing:border-box; }
+.et-panel button { cursor:pointer; border:0; border-radius:6px; }
+.et-panel button:focus-visible,.et-panel input:focus-visible { outline:2px solid #72f0cf; outline-offset:2px; }
+.et-head { display:flex; align-items:center; justify-content:space-between; font-size:17px; }
+.et-close,.et-delete { background:transparent; color:#b9cec7; padding:0 8px; font-size:22px !important; }
+.et-help { color:#b9cec7; margin:10px 0; font-size:13px; }
+.et-add { width:100%; padding:9px; color:#0b2820; background:#72f0cf; font-weight:bold !important; }
+.et-settings { display:flex; justify-content:space-between; gap:10px; margin:14px 0; font-size:12px; }
+.et-settings input { background:#243831; color:#fff; border:1px solid #527266; border-radius:4px; padding:4px; width:48px; }
+.et-key { text-align:center; }
+.et-list { max-height:210px; overflow:auto; }
+.et-row { display:flex; justify-content:space-between; align-items:center; border-top:1px solid #334b43; padding:4px 0; }
+.et-jump { flex:1; text-align:left; background:transparent; color:#72f0cf; padding:7px 6px; }
+.et-jump:hover,.et-delete:hover { background:#2b443b; }
+.et-empty { color:#b9cec7; font-size:13px; margin:8px 0; }
+.et-footer { color:#95afa4; font-size:11px; margin-top:10px; }
+.et-toast { position:absolute; bottom:80px; left:50%; transform:translateX(-50%); max-width:80%; padding:10px 16px; background:#15201ff2; border:1px solid #527266; border-radius:8px; color:#fff; font:14px/1.4 Arial,sans-serif; text-shadow:none; z-index:70; pointer-events:none; }

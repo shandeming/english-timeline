@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "English Timeline",
+  "version": "1.0.0",
+  "description": "Mark sentences on YouTube's timeline and replay them with a keyboard shortcut.",
+  "permissions": ["storage"],
+  "content_scripts": [{
+    "matches": ["https://www.youtube.com/*"],
+    "js": ["core.js", "content.js"],
+    "css": ["styles.css"],
+    "run_at": "document_idle"
+  }]
+}
