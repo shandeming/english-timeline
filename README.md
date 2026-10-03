@@ -1,11 +1,22 @@
-# English Timeline for Microsoft Edge
+# English Timeline for Chrome and Microsoft Edge
 
 Bookmark listening moments directly on YouTube's progress bar.
+
+## Store submission and downloads
+
+Version 1.0.0 was submitted to Microsoft Edge Add-ons on October 3, 2026. At submission, its status was **In review**; a public store link will be added after approval.
+
+- [Download the extension ZIP](dist/english-timeline-1.0.0.zip)
+- [Privacy policy](PRIVACY.md)
+- [Edge submission record](store/EDGE-SUBMISSION.md)
+- [Edge publishing guide](store/EDGE-PUBLISH.md)
+
+To rebuild the upload package and store images on Windows, run `powershell -ExecutionPolicy Bypass -File tools/prepare-store.ps1`. Node.js must be on PATH. The script validates JavaScript syntax and manifest references before packaging the runtime files.
 
 ## Install (about one minute)
 
 1. If using the ZIP, extract it first. Keep the extracted `english-timeline` folder somewhere permanent.
-2. In Edge, open `edge://extensions` by typing it into the address bar.
+2. In Chrome, open `chrome://extensions`; in Edge, open `edge://extensions`.
 3. Turn on **Developer mode**, then click **Load unpacked**.
 4. Select the `english-timeline` folder containing `manifest.json`.
 5. Refresh your YouTube video tab.
@@ -22,7 +33,7 @@ Bookmark listening moments directly on YouTube's progress bar.
 
 ## Storage and scope
 
-Marks are saved per video in this Edge profile using extension storage. They survive refresh and browser restart. Uninstalling the extension clears its storage; this version has no export feature. No account, server, AI, or video download is required. Its only permission is storage, and its page script runs only on `https://www.youtube.com/*`.
+Marks are saved per video in this browser profile using extension storage. They survive refresh and browser restart. Uninstalling the extension clears its storage; this version has no export feature. No account, server, AI, or video download is required. Its only permission is storage, and its page script runs only on `https://www.youtube.com/*`.
 
 The first version targets recorded videos on standard `/watch?v=...` pages, including theater and fullscreen modes. It does not mark ads, live streams with an indefinite duration, Shorts, embedded videos, or picture-in-picture. Ad detection uses YouTube's current player class and may need adjustment if YouTube changes its layout. Marks record the instant you press the key, not an automatically detected sentence boundary.
 
@@ -40,7 +51,7 @@ YouTube occasionally changes its controls. If the star or ticks are missing, ref
 
 ## Updating / removing
 
-After changing files, click **Reload** for the extension on `edge://extensions`, then refresh YouTube. To stop using it, disable or remove it on that page.
+After changing files, click **Reload** for the extension on `chrome://extensions` or `edge://extensions`, then refresh YouTube. To stop using it, disable or remove it on that page.
 
 Built with plain JavaScript and CSS, Manifest V3. There is no build step.
 
